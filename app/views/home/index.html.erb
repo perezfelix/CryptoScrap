@@ -1,0 +1,10 @@
+<H1 align="center">Quelle cryptomonnaie souhaites-tu voir ?</H1>
+<%= form_for :Crypto do |f| %>
+  <div align="center" class="field">
+    <%= f.label :name %>
+      <%= f.collection_select :crypto_id, Crypto.all, :id, :name%>
+  </div>
+  <div align="center" class="actions">
+    <%= f.submit "Submit" %>
+  </div>
+<% end %>
